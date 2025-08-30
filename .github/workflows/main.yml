@@ -1,18 +1,16 @@
-name: Test Github Actions  
+name: Test Github Actions
 
+on:
+  push:
+    branches: [ "main" ]
 
-on:   
-  push:     
-    branches: ['main']   
-      
-      
-      
-jobs: 
+jobs:
   my-example-job:
-    runs-on: unbuntu-latest      
-    steps:       
-      - name: checkout code         
-        uses: actions/checkout@v5.0.0                
-      
-      - name: print hello world         
-        run: echo "Hello world"                 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+
+      - name: Print hello world
+        run: echo "Hello world"
